@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Procedural triangles-->
+    <bean id="equilateralTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+        <property name="type" value="equilateral"/>
+    </bean>
+
+    <bean id="rightTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+        <constructor-arg value="right"/>
+        <constructor-arg value="20"/>
+    </bean>
+
+    <bean id="rightArgumentTypedTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+        <constructor-arg value="10" type="int"/>
+        <constructor-arg value="right" type="java.lang.String"/>
+    </bean>
+    <bean id="rightOrderedArgumentTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+        <constructor-arg value="10" index="1"/>
+        <constructor-arg value="right" index="0"/>
+    </bean>
+
+    <!--Object triangle-->
+    <bean id="objectTriangle" class="springjbrains.course.core.model.ObjectTriangle">
+        <property name="pointA" ref="pointABean"/>
+        <property name="pointB" ref="pointBBean"/>
+        <property name="pointC" ref="pointCBean"/>
+    </bean>
+
+    <bean id="pointABean" class="springjbrains.course.core.model.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="pointBBean" class="springjbrains.course.core.model.Point">
+        <property name="x" value="-20"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="pointCBean" class="springjbrains.course.core.model.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="20"/>
+    </bean>
+
+</beans>
