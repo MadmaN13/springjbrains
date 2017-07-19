@@ -6,9 +6,9 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by NM.Rabotaev on 13.07.2017.
  */
-public class ObjectTriangle implements DrawableForm {
+public class ObjectPointSeparatedTriangle implements DrawableForm {
 
-    private final static Logger logger = LoggerFactory.getLogger(ObjectTriangle.class);
+    private final static Logger logger = LoggerFactory.getLogger(ObjectPointSeparatedTriangle.class);
 
     private Point pointA;
     private Point pointB;
@@ -41,7 +41,7 @@ public class ObjectTriangle implements DrawableForm {
 
     @Override
     public String toString() {
-        return "ObjectTriangle{" +
+        return "ObjectPointSeparatedTriangle{" +
                 "pointA=" + pointA +
                 ", pointB=" + pointB +
                 ", pointC=" + pointC +
