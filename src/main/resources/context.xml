@@ -2,9 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-default-init-method="init"
-default-destroy-method="cleanUp">
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--default-init-method="init"-->
+<!--default-destroy-method="cleanUp">-->
 
     <!--Procedural triangles-->
     <bean id="equilateralTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
@@ -106,6 +106,8 @@ default-destroy-method="cleanUp">
         init-method="init"
         destroy-method="cleanUp">
     </bean>
+
+    <!--<bean class="springjbrains.course.core.lifecycle.DisplayNameBeanPostProcessor"/>-->
 
 
 </beans>
