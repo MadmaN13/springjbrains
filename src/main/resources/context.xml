@@ -30,14 +30,14 @@
         <property name="pointA" ref="pointA"/>
         <property name="pointB">
             <bean class="springjbrains.course.core.model.Point">
-                <property name="x" value="-20"/>
-                <property name="y" value="0"/>
+                <property name="x" value="${pointB.X}"/>
+                <property name="y" value="${pointB.Y}"/>
             </bean>
         </property>
         <property name="pointC">
             <bean class="springjbrains.course.core.model.Point">
-                <property name="x" value="0"/>
-                <property name="y" value="20"/>
+                <property name="x" value="${pointC.X}"/>
+                <property name="y" value="${pointC.Y}"/>
             </bean>
         </property>
     </bean>
@@ -59,21 +59,21 @@
 
     <!--Triangle points-->
     <bean id="pointA" class="springjbrains.course.core.model.Point">
-        <property name="x" value="0"/>
-        <property name="y" value="0"/>
+        <property name="x" value="${pointA.X}"/>
+        <property name="y" value="${pointA.Y}"/>
     </bean>
     <bean id="pointB" class="springjbrains.course.core.model.Point">
-        <property name="x" value="-20"/>
-        <property name="y" value="0"/>
+        <property name="x" value="${pointB.X}"/>
+        <property name="y" value="${pointB.Y}"/>
     </bean>
     <bean id="pointC" class="springjbrains.course.core.model.Point">
-        <property name="x" value="0"/>
-        <property name="y" value="20"/>
+        <property name="x" value="${pointC.X}"/>
+        <property name="y" value="${pointC.Y}"/>
     </bean>
 
     <!--Bean definition inheritance-->
         <!--Parent triangles-->
-    <bean id="parentObjectPointSeparatedTriangle" class="springjbrains.course.core.model.ObjectPointSeparatedTriangle" abstract="true">
+    <bean id="parentObjectPointSeparatedTriangle" class="springjbrains.course.core.model.ObjectPointSeparatedTriangle">
         <property name="pointA" ref="pointA"/>
     </bean>
 
@@ -102,12 +102,15 @@
 
     <!--Lifecycle tips-->
     <bean id="lifecycleFactoryHooksBeanExample" class="springjbrains.course.core.lifecycle.LifecycleFactoryHooksBeanExample"/>
-    <bean id="lifecycleXmlTagConfigBeanExample" class="springjbrains.course.core.lifecycle.LifecycleXmlTagConfigBeanExample"
-        init-method="init"
-        destroy-method="cleanUp">
-    </bean>
+    <!--<bean id="lifecycleXmlTagConfigBeanExample" class="springjbrains.course.core.lifecycle.LifecycleXmlTagConfigBeanExample"-->
+        <!--init-method="init"-->
+        <!--destroy-method="cleanUp">-->
+    <!--</bean>-->
 
     <!--<bean class="springjbrains.course.core.lifecycle.DisplayNameBeanPostProcessor"/>-->
-
+    <!--<bean class="springjbrains.course.core.lifecycle.BeanFactoryPostProcessorExample"/>-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="pointsConfig.properties"/>
+    </bean>
 
 </beans>

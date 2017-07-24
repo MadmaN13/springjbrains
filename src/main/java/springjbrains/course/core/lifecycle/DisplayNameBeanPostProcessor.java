@@ -14,7 +14,7 @@ public class DisplayNameBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         logger.info(new StringBuilder("In postProcessBeforeInitialization() bean name: ").append(beanName).toString());
-        return null;
+        return bean;
     }
 
     @Override
