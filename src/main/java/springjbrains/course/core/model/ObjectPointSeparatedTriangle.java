@@ -2,6 +2,7 @@ package springjbrains.course.core.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Required;
 
 /**
  * Created by NM.Rabotaev on 13.07.2017.
@@ -18,18 +19,21 @@ public class ObjectPointSeparatedTriangle implements DrawableForm {
     public Point getPointA() {
         return pointA;
     }
+    @Required
     public void setPointA(Point pointA) {
         this.pointA = pointA;
     }
     public Point getPointB() {
         return pointB;
     }
+//    @Required
     public void setPointB(Point pointB) {
         this.pointB = pointB;
     }
     public Point getPointC() {
         return pointC;
     }
+//    @Required
     public void setPointC(Point pointC) {
         this.pointC = pointC;
     }
