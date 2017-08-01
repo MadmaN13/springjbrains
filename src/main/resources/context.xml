@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 <!--default-init-method="init"-->
 <!--default-destroy-method="cleanUp">-->
 
@@ -107,10 +109,26 @@
         <!--destroy-method="cleanUp">-->
     <!--</bean>-->
 
+    <!--Autowiring example-->
+    <bean id="circle" class="springjbrains.course.core.model.Circle">
+        <property name="diameter" value="${circle.diameter}"/>
+    </bean>
+
+    <!--<bean id="center" class="springjbrains.course.core.model.Point">-->
+        <!--<property name="x" value="${center.x}"/>-->
+        <!--<property name="y" value="${center.y}"/>-->
+    <!--</bean>-->
+
     <!--<bean class="springjbrains.course.core.lifecycle.DisplayNameBeanPostProcessor"/>-->
     <!--<bean class="springjbrains.course.core.lifecycle.BeanFactoryPostProcessorExample"/>-->
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations" value="pointsConfig.properties"/>
+        <property name="locations" value="shapesConfig.properties"/>
     </bean>
-    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
+    <!--Bean post processors -->
+    <!--<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>-->
+    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
+    <!--Annotation config-->
+    <context:annotation-config/>
+
 </beans>
