@@ -110,9 +110,9 @@
     <!--</bean>-->
 
     <!--Autowiring example-->
-    <bean id="centerAutoWiredCircle" class="springjbrains.course.core.model.circle.CenterAutowiredCircle">
-        <property name="diameter" value="${circle.diameter}"/>
-    </bean>
+    <!--<bean id="centerAutoWiredCircle" class="springjbrains.course.core.model.circle.CenterAutowiredCircle">-->
+        <!--<property name="diameter" value="${circle.diameter}"/>-->
+    <!--</bean>-->
 
     <!--Some JSR250 annotations example-->
     <bean id="jsrAnnotationsCircle" class="springjbrains.course.core.model.circle.JsrAnnotationsCircle">
@@ -135,5 +135,7 @@
     <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
     <!--Annotation config-->
     <context:annotation-config/>
+
+    <context:component-scan base-package="springjbrains.course.core"/>
 
 </beans>

@@ -16,12 +16,12 @@ public abstract class AbstractCircle implements DrawableForm {
 
     @Override
     public void draw() {
-        getLogger().info(new StringBuilder("CenterAutowiredCircle drawn: ").append(toString()).toString());
+        getLogger().info(new StringBuilder("Circle drawn: ").append(toString()).toString());
     }
 
     @Override
     public String toString() {
-        return "CenterAutowiredCircle{" +
+        return "Circle{" +
                 "diameter=" + diameter +
                 ", center=" + center +
                 '}';

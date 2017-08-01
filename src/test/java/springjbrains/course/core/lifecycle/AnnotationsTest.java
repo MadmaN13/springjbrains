@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import springjbrains.course.context.AbstractClassPathXmlApplicationContextTest;
 import springjbrains.course.core.model.circle.CenterAutowiredCircle;
+import springjbrains.course.core.model.circle.ComponentCircle;
 import springjbrains.course.core.model.circle.JsrAnnotationsCircle;
 
 /**
@@ -15,6 +16,7 @@ public class AnnotationsTest extends AbstractClassPathXmlApplicationContextTest 
     private final static Logger logger = LoggerFactory.getLogger(AnnotationsTest.class);
     private final static String centerAutoWiredCircleBeanName = "centerAutoWiredCircle";
     private final static String jsrAnnotationsCircleBeanName= "jsrAnnotationsCircle";
+    private final static String componentCircleBeanName= "componentCircle";
 
     @Test
     public void testRequiredAndAutowireByNameAnnotations() {
@@ -29,6 +31,11 @@ public class AnnotationsTest extends AbstractClassPathXmlApplicationContextTest 
     @Test
     public void testJsrAnnotations () {
         getContext().getBean(jsrAnnotationsCircleBeanName, JsrAnnotationsCircle.class).draw();
+    }
+
+    @Test
+    public void testComponentAnnotation() {
+        getContext().getBean(componentCircleBeanName, ComponentCircle.class).draw();
     }
 
 }
