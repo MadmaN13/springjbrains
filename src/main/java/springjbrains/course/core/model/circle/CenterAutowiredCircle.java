@@ -1,33 +1,18 @@
-package springjbrains.course.core.model;
+package springjbrains.course.core.model.circle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import springjbrains.course.core.model.DrawableForm;
+import springjbrains.course.core.model.Point;
 
 /**
  * Created by NM.Rabotaev on 31.07.2017.
  */
-public class Circle implements DrawableForm {
+public class CenterAutowiredCircle extends AbstractCircle implements DrawableForm {
 
-    private final static Logger logger = LoggerFactory.getLogger(Circle.class);
-
-    private int diameter;
-    private Point center;
-
-    @Override
-    public void draw() {
-        logger.info(new StringBuilder("Circle drawn: ").append(toString()).toString());
-    }
-
-    @Override
-    public String toString() {
-        return "Circle{" +
-                "diameter=" + diameter +
-                ", center=" + center +
-                '}';
-    }
     //ACCESSORS
     public int getDiameter() {
         return diameter;

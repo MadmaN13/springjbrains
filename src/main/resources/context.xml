@@ -9,26 +9,26 @@
 <!--default-destroy-method="cleanUp">-->
 
     <!--Procedural triangles-->
-    <bean id="equilateralTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+    <bean id="equilateralTriangle" class="springjbrains.course.core.model.triangle.ProceduralTriangle">
         <property name="type" value="equilateral"/>
     </bean>
 
-    <bean id="rightTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+    <bean id="rightTriangle" class="springjbrains.course.core.model.triangle.ProceduralTriangle">
         <constructor-arg value="right"/>
         <constructor-arg value="20"/>
     </bean>
 
-    <bean id="rightArgumentTypedTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+    <bean id="rightArgumentTypedTriangle" class="springjbrains.course.core.model.triangle.ProceduralTriangle">
         <constructor-arg value="10" type="int"/>
         <constructor-arg value="right" type="java.lang.String"/>
     </bean>
-    <bean id="rightOrderedArgumentTriangle" class="springjbrains.course.core.model.ProceduralTriangle">
+    <bean id="rightOrderedArgumentTriangle" class="springjbrains.course.core.model.triangle.ProceduralTriangle">
         <constructor-arg value="10" index="1"/>
         <constructor-arg value="right" index="0"/>
     </bean>
 
     <!--Object triangle-->
-    <bean id="objectTriangle" class="springjbrains.course.core.model.ObjectPointSeparatedTriangle">
+    <bean id="objectTriangle" class="springjbrains.course.core.model.triangle.ObjectPointSeparatedTriangle">
         <property name="pointA" ref="pointA"/>
         <property name="pointB">
             <bean class="springjbrains.course.core.model.Point">
@@ -45,7 +45,7 @@
     </bean>
 
     <!--Object  point listed triangle-->
-    <bean id="objectPointListedTriangle" class="springjbrains.course.core.model.ObjectPointListedTriangle">
+    <bean id="objectPointListedTriangle" class="springjbrains.course.core.model.triangle.ObjectPointListedTriangle">
         <property name="points">
             <list>
                 <ref bean="pointA"/>
@@ -56,7 +56,7 @@
     </bean>
 
     <!--Autowired object triangle-->
-    <bean id="autowiredObjectTriangle" class="springjbrains.course.core.model.ObjectPointSeparatedTriangle" autowire="byName">
+    <bean id="autowiredObjectTriangle" class="springjbrains.course.core.model.triangle.ObjectPointSeparatedTriangle" autowire="byName">
     </bean>
 
     <!--Triangle points-->
@@ -75,11 +75,11 @@
 
     <!--Bean definition inheritance-->
         <!--Parent triangles-->
-    <bean id="parentObjectPointSeparatedTriangle" class="springjbrains.course.core.model.ObjectPointSeparatedTriangle">
+    <bean id="parentObjectPointSeparatedTriangle" class="springjbrains.course.core.model.triangle.ObjectPointSeparatedTriangle">
         <property name="pointA" ref="pointA"/>
     </bean>
 
-    <bean id="parentObjectPointListedTriangle" class="springjbrains.course.core.model.ObjectPointListedTriangle">
+    <bean id="parentObjectPointListedTriangle" class="springjbrains.course.core.model.triangle.ObjectPointListedTriangle">
         <property name="points">
             <list>
                 <ref bean="pointA"/>
@@ -88,12 +88,12 @@
     </bean>
 
     <!--Children-->
-    <bean id="childObjectPointSeparatedTriangle" class="springjbrains.course.core.model.ObjectPointSeparatedTriangle" parent="parentObjectPointSeparatedTriangle">
+    <bean id="childObjectPointSeparatedTriangle" class="springjbrains.course.core.model.triangle.ObjectPointSeparatedTriangle" parent="parentObjectPointSeparatedTriangle">
         <property name="pointB" ref="pointB"/>
         <property name="pointC" ref="pointC"/>
     </bean>
 
-    <bean id="childObjectPointListedTriangle" class="springjbrains.course.core.model.ObjectPointListedTriangle" parent="parentObjectPointListedTriangle">
+    <bean id="childObjectPointListedTriangle" class="springjbrains.course.core.model.triangle.ObjectPointListedTriangle" parent="parentObjectPointListedTriangle">
         <property name="points">
             <list merge="true">
                 <ref bean="pointB"/>
@@ -110,14 +110,19 @@
     <!--</bean>-->
 
     <!--Autowiring example-->
-    <bean id="circle" class="springjbrains.course.core.model.Circle">
+    <bean id="centerAutoWiredCircle" class="springjbrains.course.core.model.circle.CenterAutowiredCircle">
         <property name="diameter" value="${circle.diameter}"/>
     </bean>
 
-    <!--<bean id="center" class="springjbrains.course.core.model.Point">-->
-        <!--<property name="x" value="${center.x}"/>-->
-        <!--<property name="y" value="${center.y}"/>-->
-    <!--</bean>-->
+    <!--Some JSR250 annotations example-->
+    <bean id="jsrAnnotationsCircle" class="springjbrains.course.core.model.circle.JsrAnnotationsCircle">
+        <constructor-arg value="15"/>
+    </bean>
+
+    <bean id="center" class="springjbrains.course.core.model.Point">
+        <property name="x" value="${center.x}"/>
+        <property name="y" value="${center.y}"/>
+    </bean>
 
     <!--<bean class="springjbrains.course.core.lifecycle.DisplayNameBeanPostProcessor"/>-->
     <!--<bean class="springjbrains.course.core.lifecycle.BeanFactoryPostProcessorExample"/>-->

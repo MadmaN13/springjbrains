@@ -1,7 +1,9 @@
-package springjbrains.course.core.model;
+package springjbrains.course.core.model.triangle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import springjbrains.course.core.model.DrawableForm;
+import springjbrains.course.core.model.Point;
 
 import java.util.List;
 

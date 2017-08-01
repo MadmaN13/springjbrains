@@ -1,8 +1,10 @@
-package springjbrains.course.core.model;
+package springjbrains.course.core.model.triangle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
+import springjbrains.course.core.model.DrawableForm;
+import springjbrains.course.core.model.Point;
 
 /**
  * Created by NM.Rabotaev on 13.07.2017.
