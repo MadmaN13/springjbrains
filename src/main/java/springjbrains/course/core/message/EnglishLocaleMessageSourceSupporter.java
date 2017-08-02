@@ -16,6 +16,10 @@ public class EnglishLocaleMessageSourceSupporter {
         this.messageSource = messageSource;
     }
 
+    protected MessageSource getMessageSource() {
+        return messageSource;
+    }
+
     protected String getMessage(String code) {
         return messageSource.getMessage(code, null, notFoundIdMessage, Locale.ENGLISH);
     }

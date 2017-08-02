@@ -131,6 +131,10 @@
         <property name="locations" value="shapesConfig.properties"/>
     </bean>
 
+    <!--Application event publisher example-->
+    <bean id="drawEventPublishingCircle" class="springjbrains.course.core.model.circle.DrawEventPublishingCircle">
+    </bean>
+
     <!--Bean post processors -->
     <!--<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>-->
     <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->

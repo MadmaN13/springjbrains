@@ -8,4 +8,5 @@ public interface MessageIds {
     public String DRAWING_CONCRETE_CIRCLE = "drawing.circle.concrete";
     public String LIFECYCLE_POSTCONSTRUCT = "lifecycle.postconstruct";
     public String LIFECYCLE_PREDESTROY = "lifecycle.predestroy";
+    public String DRAWING_EVENT = "drawing.event";
 }
