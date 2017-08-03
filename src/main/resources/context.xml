@@ -152,14 +152,4 @@
         </property>
     </bean>
 
-    <!--AOP-->
-    <bean id="shapeService" class="springjbrains.course.service.ShapeService">
-        <property name="shapes">
-            <list>
-                <ref bean="jsrAnnotationsCircle"/>
-                <ref bean="autowiredObjectTriangle"/>
-            </list>
-        </property>
-    </bean>
-
 </beans>

@@ -14,6 +14,10 @@ public class LifecycleTest extends AbstractClassPathXmlApplicationContextTest {
     private final static Logger logger = LoggerFactory.getLogger(LifecycleTest.class);
     private final static String circleBeanName = "circle";
 
+    public LifecycleTest(String contextFileName) {
+        super(contextFileName);
+    }
+
     @Test
     public void testLifecycleTips() {
         logger.info("Started testing lifecycle beans...");

@@ -41,7 +41,7 @@ public class ObjectPointSeparatedTriangle implements DrawableShape {
     }
 
     @Override
-    public  void draw() {
+    public void draw() {
         logger.info("Object triangle drawn: " + toString());
     }
 

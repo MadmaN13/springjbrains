@@ -9,8 +9,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Created by NM.Rabotaev on 19.07.2017.
  */
 public class AbstractClassPathXmlApplicationContextTest {
-    private final static String contextFileName= "context.xml";
+    private static String contextFileName;
     private static AbstractApplicationContext context;
+
+    public AbstractClassPathXmlApplicationContextTest(final String contextFileName) {
+        this.contextFileName = contextFileName;
+        setUp();
+    }
 
     @BeforeClass
     public static void setUp() {

@@ -18,6 +18,10 @@ public class AnnotationsTest extends AbstractClassPathXmlApplicationContextTest 
     private final static String jsrAnnotationsCircleBeanName= "jsrAnnotationsCircle";
     private final static String componentCircleBeanName= "componentCircle";
 
+    public AnnotationsTest(String contextFileName) {
+        super(contextFileName);
+    }
+
     @Test
     public void testRequiredAndAutowireByNameAnnotations() {
         getContext().getBean(centerAutoWiredCircleBeanName, CenterAutowiredCircle.class).draw();
