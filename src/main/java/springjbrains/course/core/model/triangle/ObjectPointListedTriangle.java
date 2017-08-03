@@ -2,7 +2,7 @@ package springjbrains.course.core.model.triangle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import springjbrains.course.core.model.DrawableForm;
+import springjbrains.course.core.model.DrawableShape;
 import springjbrains.course.core.model.Point;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by NM.Rabotaev on 13.07.2017.
  */
-public class ObjectPointListedTriangle implements DrawableForm {
+public class ObjectPointListedTriangle implements DrawableShape {
 
     private final static Logger logger = LoggerFactory.getLogger(ObjectPointListedTriangle.class);
 

@@ -11,8 +11,8 @@ public class EnglishLocaleMessageSourceSupporter {
 
     private final String notFoundIdMessage = "Id for message not found in message source file!";
 
-    private MessageSource messageSource;
-    public EnglishLocaleMessageSourceSupporter(MessageSource messageSource) {
+    private final MessageSource messageSource;
+    protected EnglishLocaleMessageSourceSupporter(MessageSource messageSource) {
         this.messageSource = messageSource;
     }
 

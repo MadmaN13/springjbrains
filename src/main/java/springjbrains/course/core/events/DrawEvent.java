@@ -1,8 +1,6 @@
 package springjbrains.course.core.events;
 
 import org.springframework.context.ApplicationEvent;
-import org.springframework.context.MessageSource;
-import springjbrains.course.core.MessageIds;
 
 /**
  * Created by NM.Rabotaev on 02.08.2017.

@@ -5,25 +5,25 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
 import springjbrains.course.core.MessageIds;
 import springjbrains.course.core.message.EnglishLocaleMessageSourceSupporter;
-import springjbrains.course.core.model.DrawableForm;
+import springjbrains.course.core.model.DrawableShape;
 import springjbrains.course.core.model.Point;
 
 /**
  * Created by NM.Rabotaev on 01.08.2017.
  */
-public abstract class AbstractCircle extends EnglishLocaleMessageSourceSupporter implements DrawableForm {
+public abstract class AbstractCircle extends EnglishLocaleMessageSourceSupporter implements DrawableShape {
 
-    private final static Logger logger = LoggerFactory.getLogger(CenterAutowiredCircle.class);
-    protected int diameter;
-    protected Point center;
+    private final static Logger logger = LoggerFactory.getLogger(AbstractCircle.class);
+    int diameter;
+    Point center;
 
-    public AbstractCircle(MessageSource messageSource) {
+    AbstractCircle(MessageSource messageSource) {
         super(messageSource);
     }
 
     @Override
     public void draw() {
-        getLogger().info(new StringBuilder(getMessage(MessageIds.DRAWING_ABSTRACT_CIRCLE)).append(toString()).toString());
+        getLogger().info(getMessage(MessageIds.DRAWING_ABSTRACT_CIRCLE) + toString());
     }
 
     @Override
@@ -35,7 +35,7 @@ public abstract class AbstractCircle extends EnglishLocaleMessageSourceSupporter
     }
 
     //ACCESSORS
-    public static Logger getLogger() {
+    static Logger getLogger() {
         return logger;
     }
 }

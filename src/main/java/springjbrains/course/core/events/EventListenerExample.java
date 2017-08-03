@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * Created by NM.Rabotaev on 02.08.2017.
  */
 @Component
-public class EventListenerExample implements ApplicationListener{
+class EventListenerExample implements ApplicationListener{
 
     private final static Logger logger = LoggerFactory.getLogger(EventListenerExample.class);
 

@@ -3,13 +3,13 @@ package springjbrains.course.core.model.triangle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
-import springjbrains.course.core.model.DrawableForm;
+import springjbrains.course.core.model.DrawableShape;
 import springjbrains.course.core.model.Point;
 
 /**
  * Created by NM.Rabotaev on 13.07.2017.
  */
-public class ObjectPointSeparatedTriangle implements DrawableForm {
+public class ObjectPointSeparatedTriangle implements DrawableShape {
 
     private final static Logger logger = LoggerFactory.getLogger(ObjectPointSeparatedTriangle.class);
 

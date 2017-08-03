@@ -15,6 +15,6 @@ public class BeanFactoryPostProcessorExample implements BeanFactoryPostProcessor
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        logger.info(new StringBuilder("postProcessBeanFactory() invoked in class: ").append(getClass().getName()).toString());
+        logger.info("postProcessBeanFactory() invoked in class: " + getClass().getName());
     }
 }

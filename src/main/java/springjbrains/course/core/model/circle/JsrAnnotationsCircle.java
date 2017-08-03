@@ -20,9 +20,8 @@ public class JsrAnnotationsCircle extends AbstractCircle {
 
     @Override
     public void draw() {
-        getLogger().info(new StringBuilder(getMessage(MessageIds.DRAWING_CONCRETE_CIRCLE,new Object[]{getClass().getName()}))
-                .append(super.toString())
-                .toString());
+        getLogger().info(getMessage(MessageIds.DRAWING_CONCRETE_CIRCLE, new Object[]{getClass().getName()}) +
+                super.toString());
     }
 
     @Resource
@@ -32,13 +31,12 @@ public class JsrAnnotationsCircle extends AbstractCircle {
 
     @PostConstruct
     public void init() {
-        getLogger().info(new StringBuilder(getMessage(MessageIds.LIFECYCLE_POSTCONSTRUCT))
-                .append(getClass().getName())
-                .toString());
+        getLogger().info(getMessage(MessageIds.LIFECYCLE_POSTCONSTRUCT) +
+                getClass().getName());
     }
 
     @PreDestroy
     public void destroy() {
-        getLogger().info(new StringBuilder(getMessage(MessageIds.LIFECYCLE_PREDESTROY)).append(getClass().getName()).toString());
+        getLogger().info(getMessage(MessageIds.LIFECYCLE_PREDESTROY) + getClass().getName());
     }
 }

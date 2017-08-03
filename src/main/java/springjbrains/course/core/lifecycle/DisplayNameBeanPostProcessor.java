@@ -13,13 +13,13 @@ public class DisplayNameBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        logger.info(new StringBuilder("In postProcessBeforeInitialization() bean name: ").append(beanName).toString());
+        logger.info("In postProcessBeforeInitialization() bean name: " + beanName);
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        logger.info(new StringBuilder("In postProcessAfterInitialization() bean name: ").append(beanName).toString());
+        logger.info("In postProcessAfterInitialization() bean name: " + beanName);
         return bean;
     }
 }

@@ -11,12 +11,12 @@ public class LifecycleXmlTagConfigBeanExample {
     private final static Logger logger = LoggerFactory.getLogger(LifecycleXmlTagConfigBeanExample.class);
 
     public void init() {
-        logger.info(new StringBuilder("init() invoked for instance of ")
-                .append(getClass().getName()).toString());
+        logger.info("init() invoked for instance of " +
+                getClass().getName());
     }
     public void cleanUp() {
-        logger.info(new StringBuilder("cleanUp() invoked for instance of ")
-                .append(getClass().getName()).toString());
+        logger.info("cleanUp() invoked for instance of " +
+                getClass().getName());
     }
 
 }

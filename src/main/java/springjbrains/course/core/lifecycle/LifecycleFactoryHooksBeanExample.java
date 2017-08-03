@@ -14,13 +14,13 @@ public class LifecycleFactoryHooksBeanExample implements InitializingBean, Dispo
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        logger.info(new StringBuilder("afterPropertiesSet() invoked for instance of ")
-                .append(getClass().getName()).toString());
+        logger.info("afterPropertiesSet() invoked for instance of " +
+                getClass().getName());
     }
 
     @Override
     public void destroy() throws Exception {
-        logger.info(new StringBuilder("destroy() invoked for instance of ")
-                .append(getClass().getName()).toString());
+        logger.info("destroy() invoked for instance of " +
+                getClass().getName());
     }
 }

@@ -2,7 +2,6 @@ package springjbrains.course.core.model.circle;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
-import org.springframework.context.MessageSource;
 import springjbrains.course.core.events.DrawEvent;
 
 /**

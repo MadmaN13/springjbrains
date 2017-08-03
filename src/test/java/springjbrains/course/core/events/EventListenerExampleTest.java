@@ -4,8 +4,6 @@ import org.junit.Test;
 import springjbrains.course.context.AbstractClassPathXmlApplicationContextTest;
 import springjbrains.course.core.model.circle.DrawEventPublishingCircle;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by NM.Rabotaev on 02.08.2017.
  */

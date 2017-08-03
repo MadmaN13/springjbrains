@@ -2,26 +2,26 @@ package springjbrains.course.core.model.triangle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import springjbrains.course.core.model.DrawableForm;
+import springjbrains.course.core.model.DrawableShape;
 
 /**
  * Created by NM.Rabotaev on 12.07.2017.
  */
-public class ProceduralTriangle implements DrawableForm {
+public class ProceduralTriangle implements DrawableShape {
 
     private final static Logger logger = LoggerFactory.getLogger(ProceduralTriangle.class);
 
     private String type;
     private int height;
 
-    public ProceduralTriangle() {
+    private ProceduralTriangle() {
         super();
     }
-    public ProceduralTriangle(String type) {
+    private ProceduralTriangle(String type) {
         this.type = type;
     }
 
-    public ProceduralTriangle(String type, int height) {
+    private ProceduralTriangle(String type, int height) {
         this.type = type;
         this.height = height;
     }
