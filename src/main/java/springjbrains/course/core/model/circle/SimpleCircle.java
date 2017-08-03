@@ -27,6 +27,12 @@ public class SimpleCircle implements DrawableShape {
                 ", diameter=" + diameter +
                 '}';
     }
+
+    public String drawCenter() {
+        String message = "Draw SimpleCircle center: " + center;
+        logger.info(message);
+        return message;
+    }
     //ACCESSORS
     public Point getCenter() {
         return center;

@@ -3,6 +3,7 @@ package springjbrains.course.service;
 import org.junit.Test;
 import springjbrains.course.TestConstants;
 import springjbrains.course.context.AbstractClassPathXmlApplicationContextTest;
+import springjbrains.course.core.model.circle.SimpleCircle;
 
 import static org.junit.Assert.*;
 
@@ -12,6 +13,7 @@ import static org.junit.Assert.*;
 public class ShapeServiceTest extends AbstractClassPathXmlApplicationContextTest {
 
     private final String shapeServiceName = "shapeService";
+    private final String simpleCircleAName = "simpleCircleA";
 
     public ShapeServiceTest(String contextFileName) {
         super(contextFileName);
@@ -21,6 +23,7 @@ public class ShapeServiceTest extends AbstractClassPathXmlApplicationContextTest
     public void getShapesTest() throws Exception {
         getContext().getBean(shapeServiceName, ShapeService.class).getShapes().get(0).draw();
         getContext().getBean(shapeServiceName, ShapeService.class).getShapes().get(1).draw();
+        getContext().getBean(shapeServiceName, ShapeService.class).getShapes().get(2).draw();
     }
 
     public static void main(String [] args) throws Exception {

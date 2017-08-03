@@ -24,6 +24,8 @@
         <property name="diameter" value="10"/>
     </bean>
 
+    <bean id="triangle" class="springjbrains.course.core.model.triangle.ProceduralTriangle"/>
+
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations" value="shapesConfig.properties"/>
     </bean>
@@ -36,6 +38,7 @@
             <list>
                 <ref bean="simpleCircleA"/>
                 <ref bean="simpleCircleB"/>
+                <ref bean="triangle"/>
             </list>
         </property>
     </bean>
