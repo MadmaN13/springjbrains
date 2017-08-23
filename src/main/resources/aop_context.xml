@@ -32,7 +32,7 @@
 
     <!--AOP-->
     <aop:aspectj-autoproxy/>
-    <bean name="loggingAspect" class="springjbrains.course.aop.aspect.LoggingAspect"/>
+    <bean name="loggingAspect" class="springjbrains.course.aop.aspect.ExecutionAspectExample"/>
     <bean id="shapeService" class="springjbrains.course.service.ShapeService">
         <property name="shapes">
             <list>

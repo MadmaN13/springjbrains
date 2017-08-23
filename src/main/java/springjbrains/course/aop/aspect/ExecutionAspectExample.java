@@ -10,9 +10,9 @@ import org.slf4j.LoggerFactory;
  * Created by NM.Rabotaev on 03.08.2017.
  */
 @Aspect
-public class LoggingAspect {
+public class ExecutionAspectExample {
 
-    private final static Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
+    private final static Logger logger = LoggerFactory.getLogger(ExecutionAspectExample.class);
 
 
     @Pointcut("execution(void draw())")
