@@ -2,8 +2,11 @@ package springjbrains.course.context;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import springjbrains.course.service.ShapeService;
 
 /**
  * Created by NM.Rabotaev on 19.07.2017.
@@ -11,6 +14,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AbstractClassPathXmlApplicationContextTest {
     private static String contextFileName;
     private static AbstractApplicationContext context;
+    private final static Logger logger = LoggerFactory.getLogger(AbstractClassPathXmlApplicationContextTest.class);
 
     public AbstractClassPathXmlApplicationContextTest(final String contextFileName) {
         this.contextFileName = contextFileName;
@@ -30,5 +34,9 @@ public class AbstractClassPathXmlApplicationContextTest {
     //ACCESSORS
     protected AbstractApplicationContext getContext() {
         return context;
+    }
+
+    protected Logger getLogger() {
+        return logger;
     }
 }
