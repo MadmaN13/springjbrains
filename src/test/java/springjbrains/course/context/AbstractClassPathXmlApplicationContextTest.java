@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import springjbrains.course.service.ShapeService;
 
 /**
  * Created by NM.Rabotaev on 19.07.2017.

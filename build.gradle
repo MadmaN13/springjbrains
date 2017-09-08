@@ -8,6 +8,9 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://repo.spring.io/libs-release'
+    }
 }
 
 dependencies {
@@ -19,4 +22,9 @@ dependencies {
     compile group: 'org.lucee', name: 'aspectj', version: '1.7.4'
     compile group:'org.springframework', name:'spring-aspects', version: '4.3.10.RELEASE'
     compile group: 'org.springframework', name:'spring-context', version: '4.3.9.RELEASE'
+    compile group:'org.springframework.data', name: 'spring-data-jpa', version: '1.11.6.RELEASE'
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.10.Final'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
+    compile group: 'joda-time', name: 'joda-time-hibernate', version: '1.3'
 }
