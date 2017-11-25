@@ -9,7 +9,12 @@ import java.util.List;
  */
 public interface ContactService {
 
+
     List<ContactEntity> findAll();
     List<ContactEntity> findByFirstName(String firstName);
     List<ContactEntity> findByFirstNameAndLastName(String firstName, String lastName);
+
+    ContactEntity save(ContactEntity e);
+
+    void delete(ContactEntity contactEntity);
 }

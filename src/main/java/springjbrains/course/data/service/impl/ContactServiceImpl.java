@@ -20,23 +20,33 @@ import java.util.List;
 public class ContactServiceImpl implements ContactService {
 
     @Autowired
-    private ContactRepository contactRepository;
+    private ContactRepository repository;
 
     @Override
     public List<ContactEntity> findAll() {
         List<ContactEntity> result = new ArrayList<>();
-        Iterable<ContactEntity> source = contactRepository.findAll();
+        Iterable<ContactEntity> source = repository.findAll();
         source.forEach(result::add);
         return result;
     }
 
     @Override
     public List<ContactEntity> findByFirstName(String firstName) {
-        return contactRepository.findByFirstName(firstName);
+        return repository.findByFirstName(firstName);
     }
 
     @Override
     public List<ContactEntity> findByFirstNameAndLastName(String firstName, String lastName) {
-        return contactRepository.findByFirstNameAndLastName(firstName, lastName);
+        return repository.findByFirstNameAndLastName(firstName, lastName);
+    }
+
+    @Override
+    public ContactEntity save(ContactEntity e) {
+        return repository.save(e);
+    }
+
+    @Override
+    public void delete(ContactEntity e) {
+        repository.delete(e);
     }
 }
